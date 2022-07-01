@@ -26,6 +26,12 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h7A-JF-bgU" id="57J-1o-X46">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HcW-ei-PKo">
+                                                    <rect key="frame" x="244" y="20" width="150" height="4"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </progressView>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -116,9 +122,26 @@
                     <view key="view" contentMode="scaleToFill" id="5mb-hq-uYz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMm-aq-R4c">
+                                <rect key="frame" x="12" y="56" width="390" height="794"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dtK-9I-Krz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dtK-9I-Krz" firstAttribute="bottom" secondItem="qMm-aq-R4c" secondAttribute="bottom" constant="12" id="N6r-YI-zbe"/>
+                            <constraint firstItem="qMm-aq-R4c" firstAttribute="top" secondItem="dtK-9I-Krz" secondAttribute="top" constant="12" id="O7h-tf-OAY"/>
+                            <constraint firstItem="qMm-aq-R4c" firstAttribute="leading" secondItem="dtK-9I-Krz" secondAttribute="leading" constant="12" id="jL3-7O-RHy"/>
+                            <constraint firstItem="dtK-9I-Krz" firstAttribute="trailing" secondItem="qMm-aq-R4c" secondAttribute="trailing" constant="12" id="rYL-CR-XhQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="qMm-aq-R4c" id="dhI-zE-ARH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zpP-ia-JjC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
